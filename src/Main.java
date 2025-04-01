@@ -7,7 +7,7 @@ public class Main {
         while (total < 2_459_000) {
             c += 1;
             total = total + saving;
-                System.out.println("Месяц " + c + ", сумма накоплений равна " + total + " рублей");
+            System.out.println("Месяц " + c + ", сумма накоплений равна " + total + " рублей");
         }
         System.out.println("\nЗадание 2");
         int a = 1;
