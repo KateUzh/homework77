@@ -5,11 +5,9 @@ public class Main {
         int total = 0;
         int c = 0;
         while (total < 2_459_000) {
-            total = total + saving;
             c += 1;
-            if (total > 2_459_000) {
+            total = total + saving;
                 System.out.println("Месяц " + c + ", сумма накоплений равна " + total + " рублей");
-            }
         }
         System.out.println("\nЗадание 2");
         int a = 1;
