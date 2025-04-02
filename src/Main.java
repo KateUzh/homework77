@@ -3,11 +3,11 @@ public class Main {
         System.out.println("Задание 1");
         int saving = 15000;
         int total = 0;
-        int c = 0;
+        int month = 0;
         while (total < 2_459_000) {
-            c += 1;
+            month += 1;
             total = total + saving;
-            System.out.println("Месяц " + c + ", сумма накоплений равна " + total + " рублей");
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
         }
         System.out.println("\nЗадание 2");
         int a = 1;
@@ -21,17 +21,18 @@ public class Main {
         }
         System.out.println("\n\nЗадание 3");
         int populationY = 12_000_000;
-        int birth = 17 * populationY / 1000;
-        int mortality = 8 * populationY / 1000;
-        for (int i = 1; i < 11; i += 1) {
-            populationY = populationY + birth - mortality;
+        int birthPerThousand = 17;
+        int mortalityPerThousand = 8;
+        for (int i = 0; i <= 10; i++) {
+            populationY += populationY / 1000 * (birthPerThousand - mortalityPerThousand);
             System.out.println("Год " + i + ", численность населения составляет " + populationY);
         }
         System.out.println("\nЗадание 4");
         total = 15000;
-        for (int i = 0; total < 12_000_000; i++) {
+        double percent = 7D / 100;
+        for (int i = 1; total < 12_000_000; i++) {
+            total += (int) (total * percent);
             System.out.println("Месяц " + i + ", накоплено " + total);
-            total = total + total / 100 * 7;
         }
         System.out.println("\nЗадание 5");
         total = 15000;
